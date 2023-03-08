@@ -1,0 +1,53 @@
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@mixin smaller_desktop {
+  @media screen and (max-width: 84em) {
+    @content;
+  }
+}
+
+
+/**************************/
+/* BELOW 1200px (Landscape Mode Tablets) */
+/**************************/
+
+@mixin landscape_tablet {
+  @media screen and (max-width: 75em) {
+    @content;
+  }
+}
+
+
+/**************************/
+/* BELOW 928px (Portrait Mode Tablets) */
+/**************************/
+
+@mixin portrait_tablet {
+  @media screen and (max-width: 58em) {
+    @content;
+  }
+}
+
+
+/**************************/
+/* BELOW 704px (Smaller Tablets) */
+/**************************/
+
+@mixin smaller_tablet {
+  @media screen and (max-width: 44em) {
+    @content;
+  }
+}
+
+
+/**************************/
+/* BELOW 512px (Phones) */
+/**************************/
+
+@mixin phone {
+  @media screen and (max-width: 32em) {
+    @content;
+  }
+}

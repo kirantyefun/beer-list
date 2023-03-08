@@ -1,0 +1,133 @@
+@import '../../global.scss';
+@import '../../media-queries';
+
+.section-beer-list {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+  margin-bottom: 3.2rem;
+
+  @include smaller_tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .beer-card {
+    display: flex;
+    gap: 2rem;
+    padding: 3.2rem;
+    padding-left: 0;
+    padding-bottom: 1.8rem;
+    box-shadow: 0 2px 9px 2px rgba(0, 0, 0, 0.097);
+    border-radius: 3px;
+
+    &:hover {
+      background-color: rgba(242,249,253,255);
+      cursor: pointer;
+    }
+    
+    img {
+      max-width: 100%;
+      max-height: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .beer-img-container {
+      height: 11rem;
+      flex: 0.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+
+      @include portrait_tablet {
+        gap: 1.2rem;
+      }
+
+      .beer-title {
+        font-weight: 500;
+        font-size: 2.4rem;
+        color: #333;
+
+        @include phone {
+          font-size: 2rem;
+        }
+
+      }
+
+      .beer-tagline {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: $accentColor;
+
+        @include phone {
+          font-size: 1.8rem;
+        }
+
+      }
+
+      .beer-description {
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+
+        @include portrait_tablet {
+          line-height: 1.4;
+        }
+
+        @include phone {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    
+  }
+}
+
+.load-more {
+  color: $primaryColor;
+  margin-bottom: 3.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .btn {
+    border: none;
+    background: none;
+    color: $primaryColor;
+
+    &:disabled {
+      cursor: none !important;
+    }
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+  .btn, .icon {
+    cursor: pointer;
+  }
+}
+
+.tooltip {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  font-weight: 300;
+  color: #ccc;
+}

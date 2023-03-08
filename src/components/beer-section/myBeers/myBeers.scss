@@ -1,0 +1,60 @@
+@import '../../../global.scss';
+
+.empty-beers {
+  background-color: rgba(251,251,250,255);
+  height: 80vh;
+  padding-top: 16.8rem;
+
+  p {
+    color: rgba(133,133,133,255);
+    font-size: 1.2rem;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+  }
+
+  .btn-add {
+    border-radius: 3px;
+    border: none;
+    background: none;
+    color: $primaryColor;
+    text-transform: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      color: $shadePrimaryColor;
+    }
+  }
+
+}
+
+.default-beer-img-container {
+  img {
+    border: 1px solid rgba(226,227,227,255);
+    border-radius: 3px;
+  }
+}
+
+.form-actions-container {
+  padding: 2.2rem 2.5rem;
+  padding-top: 0rem;
+  margin-top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+
+  .btn-add {
+    border-radius: 3px;
+    border: none;
+    background: none;
+    color: $whitePrimary;
+    background-color: $primaryColor;
+    text-transform: none;
+    font-size: 1.2rem;
+    &:hover {
+      background-color: $shadePrimaryColor;
+    }
+  }
+}
+

@@ -1,0 +1,61 @@
+@import '../../global.scss';
+@import '../../media-queries';
+
+.header {
+  padding-top: 3.2rem;
+  height: 9.6rem;
+
+  @include smaller_tablet {
+    justify-content: center;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn-add {
+      border-radius: 3px;
+      border: none;
+      background: none;
+      color: $whitePrimary;
+      background-color: $primaryColor;
+      text-transform: none;
+      font-size: 1.2rem;
+      &:hover {
+        background-color: $shadePrimaryColor;
+      }
+    }
+  }
+
+  .main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    padding: 1.6rem 0;
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: $textColorThresholdLight;
+      font-weight: 400;
+      font-size: 1.8rem;
+      transition: all 0.2s ease;
+
+      &.active {
+        color: $textColorBold;
+        text-decoration: none;
+        border-bottom: 4px solid $primaryColor;
+      }
+    }
+
+    // .main-nav-link:hover,
+    // .main-nav-link:active {
+    // add property as required
+    // }
+  }
+}
+
+
