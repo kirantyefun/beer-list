@@ -1,9 +1,9 @@
 import "./beer.scss";
-import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 
 export default function Beer({name, description, image, tagline, ingredients}) {
-  const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
+  const BootstrapTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
   ))(({ theme }) => ({
     [`& .${tooltipClasses.arrow}`]: {
